@@ -1,9 +1,51 @@
+:root{
+  --primary-color:rgb(48, 226, 42);
+}
 
+body{
+  font-family: 'Helvetica',sans-serif;
+  font-size: large;
+}
  .container{
     display:flex;
     flex-direction: column;
-    width:50vw;
-   margin:auto;
-   
+    width:60vw;
+   margin:auto;  
  }
+ .heading {
+  font-size: 45px;
+  text-align: center;
+  margin: 0px 0px 40px 0px;
+  padding: 30px 0px 10px 0px;
+  height: 100px;
+  width:100%;
+  border-radius: 15px;
+  background-color: var(--primary-color);
+}
+input{
+  margin:5px 0px;
+}
+#check-button{
+  margin: auto;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 10px;
+}
+#check-button:hover{
+  background-color:var(--primary-color);
+  border-color: var(--primary-color);
+}
+#error-message{
+  color:red;
+  font-weight: bold;
+}
+.table-change{
+  margin: 20px 0px;
+}
+#no-of-notes{
+  padding:0px 10px
+}
+.amount-given{
+  padding:0px 10px;
+}
  

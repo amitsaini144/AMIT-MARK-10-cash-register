@@ -3,6 +3,9 @@ const cashGiven = document.querySelector("#cash-given");
 const checkButton = document.querySelector("#check-button");
 const error =document.querySelector("#error-message");
 const noOfNotes = document.querySelectorAll("#no-of-notes");
+const tableChange = document.querySelector(".table-change");
+
+tableChange.style.display = "none";
 
 const availableNotes = [2000, 500, 100, 50,20, 10, 5, 1];
 
@@ -12,17 +15,19 @@ checkButton.addEventListener("click", function checkBillAndCash() {
     if(billAmount.value > 0){
         
       if(Number(cashGiven.value) >= Number(billAmount.value)){
-        // console.log("here",typeof cashGiven.value ,typeof billAmount.value,cashGiven.value >= billAmount.value);
-        const cashReturn = cashGiven.value-billAmount.value;
+        tableChange.style.display = "block";
+        const cashReturn = cashGiven.value - billAmount.value;
          changeC(cashReturn);
       }
       else{
-        errorMessage("Cash given can not be less than bill amount");
+        tableChange.style.display = "none";
+        errorMessage("Cash given is not valid!!");
       }
 
     }
     else{
-        errorMessage("Bill amount is not valid");
+      tableChange.style.display = "none";
+        errorMessage("Bill amount is not valid!!");
     }
 } );
 
